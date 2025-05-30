@@ -12,6 +12,7 @@
 
             <li>
                 {{ products.name }} - {{ products.prise }}
+                <a href="{% url_'product_details' product.id %}">детальніше </a>
             </li>
 
         {% endfor %}

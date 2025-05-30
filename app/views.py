@@ -14,6 +14,25 @@ def products_list(request):
     )
 
 
+def get_products_by_id(request, product_id):
+    products = Products.objects.get(id=product_id)
+    context = {
+        "products": products,
+
+    }
+
+    return render(
+        request, 
+        template_name: "app/product_detals.html",
+        context=context
+
+    )
+
+
+
+
+
+
 def products_detail(request):
     # Логіка для відображення деталей продукту
     pass
