@@ -6,5 +6,15 @@
 </head>
 <body>
 
+    <h2>Product List</h2>
+    <ul>
+        {% for products in products %}
+
+            <li>
+                {{ products.name }} - {{ products.prise }}
+            </li>
+
+        {% endfor %}
+    </ul>
 </body>
 </html>

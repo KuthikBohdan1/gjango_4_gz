@@ -2,7 +2,7 @@ from django.shortcuts import render
 from app.models import Products
 
 
-def product_list(request):
+def products_list(request):
     products = Products.objects.all()
     context = {
         "products_list": products,
@@ -12,3 +12,8 @@ def product_list(request):
         template_name="myapp/products_list.html",
         context=context,  
     )
+
+
+def products_detail(request):
+    # Логіка для відображення деталей продукту
+    pass
